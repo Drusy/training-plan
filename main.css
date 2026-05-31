@@ -1,0 +1,33 @@
+---
+---
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.markdown h1 {
+    @apply text-4xl font-bold mb-2 text-center;
+}
+
+.markdown h2 {
+    @apply font-semibold mt-4;
+}
+
+.markdown h3 {
+    @apply font-semibold mt-4;
+}
+
+.markdown a {
+    @apply whitespace-nowrap text-blue-900 dark:text-blue-200;
+}
+
+a {
+    @apply text-blue-900 dark:text-blue-200;
+}
+
+.markdown ul {
+    @apply list-disc list-inside inline-block mx-auto text-left;
+}
+
+.markdown ol {
+    @apply list-decimal list-inside inline-block mx-auto text-left;
+}

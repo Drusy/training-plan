@@ -1,0 +1,67 @@
+---
+layout: page
+lang: zh
+permalink: /zh/
+---
+
+<section class="flex flex-col sm:flex-row mt-16 mb-16 justify-center items-center gap-x-10 max-w-screen-md m-auto">
+    <img class="h-auto filter drop-shadow-xl w-1/5" style="border-radius: 22.5%;"
+        src="{{ site.app_icon | relative_url }}" alt="应用图标" />
+    <div class="m-3 text-center sm:text-left">
+        <h1 class="text-4xl font-bold">{{ site.app_name }}</h1>
+        <p class="text-xl font-semibold mb-1">让 ERG 训练更简单</p>
+        <div class="flex space-x-2 max-w-full">
+            <a href="{{ site.app_download }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/apple-badge.png' | relative_url }}" alt="下载" />
+            </a>
+            {% if site.app_github %}
+            <a href="{{ site.app_github }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/github-badge.png' | relative_url }}" alt="在 github 打开" />
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto">
+    <h2 class="ml-6 text-2xl font-bold">截图</h2>
+    <div class="flex gap-x-7 overflow-x-scroll">
+        {% assign screenshots = site.static_files | where_exp: "f", "f.path contains '/assets/screenshots/zh/'" %}
+        {% for img in screenshots %}
+        <img class="{% if forloop.first %}ml-7{% endif %} {% if forloop.last %}mr-7{% endif %} w-48 h-auto shadow rounded-2xl transform transition duration-300 hover:scale-105 my-7"
+            src="{{ img.path | relative_url }}" alt="{{ img.name }}">
+        {% endfor %}
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto px-6 markdown">
+    <h2 class="text-2xl font-bold mb-3">应用介绍</h2>
+    <p>Trainer Workouts 是一款专注于室内骑行训练的 iOS 应用，支持蓝牙传感器与智能骑行台。它帮助你进行结构化训练、实时查看关键数据，并保留清晰的训练历史。</p>
+    <br />
+    <h2>实时训练面板</h2>
+    <p>实时显示功率、踏频、心率、速度、距离与训练时长等核心指标。</p>
+    <br />
+    <h2>蓝牙设备管理</h2>
+    <p>轻松配对并快速重连心率带、踏频传感器和骑行台设备。</p>
+    <br />
+    <h2>结构化训练</h2>
+    <p>支持内置与自定义 Zwift <code>.zwo</code> 训练，提供可视化时间轴与目标引导。</p>
+    <br />
+    <h2>创建 / 导入 / 导出</h2>
+    <p>可在应用内创建训练，从“文件”导入 <code>.zwo</code>，并在需要时导出。</p>
+    <br />
+    <h2>训练会话控制</h2>
+    <p>支持开始、暂停、继续和结束会话，并可在训练结束时启用自动化操作。</p>
+    <br />
+    <h2>训练提示</h2>
+    <p>在区间切换前提供可选倒计时提醒，支持声音和震动。</p>
+    <br />
+    <h2>历史与表现追踪</h2>
+    <p>完整会话历史，包含汇总指标与训练后详细视图。</p>
+    <br />
+    <h2>Strava 集成</h2>
+    <p>连接 Strava 账户并同步训练，显示清晰的同步状态。</p>
+    <br />
+    <h2>运动员设置</h2>
+    <p>在专用设置页面配置 FTP、体重和训练相关行为。</p>
+</section>

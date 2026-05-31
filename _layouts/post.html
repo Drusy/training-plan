@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<body class="min-h-screen flex flex-col pt-12 bg-gray-100 dark:bg-black dark:text-white">
+    <style>
+        .post-markdown h1 {
+            text-align: center;
+        }
+    </style>
+
+    <a href="/" class="block m-auto w-16 mb-5">
+        <img class="filter drop-shadow-xl w-full" style="border-radius: 22.5%;" src="{{ site.app_icon | relative_url }}"
+            alt="app icon" />
+    </a>
+
+    <section class="px-6 flex-1 text-left max-w-prose m-auto markdown post-markdown">
+        {{ content }}
+    </section>
+
+    {% include footer.html %}
+</body>

@@ -1,0 +1,67 @@
+---
+layout: page
+lang: nl
+permalink: /nl/
+---
+
+<section class="flex flex-col sm:flex-row mt-16 mb-16 justify-center items-center gap-x-10 max-w-screen-md m-auto">
+    <img class="h-auto filter drop-shadow-xl w-1/5" style="border-radius: 22.5%;"
+        src="{{ site.app_icon | relative_url }}" alt="app-icoon" />
+    <div class="m-3 text-center sm:text-left">
+        <h1 class="text-4xl font-bold">{{ site.app_name }}</h1>
+        <p class="text-xl font-semibold mb-1">ERG-workouts eenvoudig gemaakt</p>
+        <div class="flex space-x-2 max-w-full">
+            <a href="{{ site.app_download }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/apple-badge.png' | relative_url }}" alt="download" />
+            </a>
+            {% if site.app_github %}
+            <a href="{{ site.app_github }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/github-badge.png' | relative_url }}" alt="open op github" />
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto">
+    <h2 class="ml-6 text-2xl font-bold">Screenshots</h2>
+    <div class="flex gap-x-7 overflow-x-scroll">
+        {% assign screenshots = site.static_files | where_exp: "f", "f.path contains '/assets/screenshots/nl/'" %}
+        {% for img in screenshots %}
+        <img class="{% if forloop.first %}ml-7{% endif %} {% if forloop.last %}mr-7{% endif %} w-48 h-auto shadow rounded-2xl transform transition duration-300 hover:scale-105 my-7"
+            src="{{ img.path | relative_url }}" alt="{{ img.name }}">
+        {% endfor %}
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto px-6 markdown">
+    <h2 class="text-2xl font-bold mb-3">Beschrijving</h2>
+    <p>Trainer Workouts is een gerichte iOS-app voor indoor fietsen met Bluetooth-sensoren en smart trainers. De app helpt je gestructureerd te trainen, live statistieken te volgen en een duidelijke trainingshistorie bij te houden.</p>
+    <br />
+    <h2>Live trainingsdashboard</h2>
+    <p>Realtime weergave van belangrijke statistieken zoals vermogen, cadans, hartslag, snelheid, afstand en tijd.</p>
+    <br />
+    <h2>Bluetooth-apparaatbeheer</h2>
+    <p>Eenvoudig koppelen en snel opnieuw verbinden van hartslagmeters, cadanssensoren en trainers.</p>
+    <br />
+    <h2>Gestructureerde workouts</h2>
+    <p>Ingebouwde en aangepaste Zwift-<code>.zwo</code>-workouts met visuele tijdlijn en duidelijke doelen.</p>
+    <br />
+    <h2>Aanmaken / importeren / exporteren</h2>
+    <p>Maak workouts in de app, importeer <code>.zwo</code>-bestanden uit Bestanden en exporteer ze wanneer nodig.</p>
+    <br />
+    <h2>Sessiebeheer</h2>
+    <p>Start, pauzeer, hervat en stop sessies, met optionele automatisering aan het einde van de workout.</p>
+    <br />
+    <h2>Workout-meldingen</h2>
+    <p>Optionele aftelmeldingen vóór intervalwissels, met geluid en trilling.</p>
+    <br />
+    <h2>Historie en prestaties</h2>
+    <p>Volledige sessiehistorie met samenvattende statistieken en een gedetailleerde post-workoutweergave.</p>
+    <br />
+    <h2>Strava-integratie</h2>
+    <p>Koppel je Strava-account en synchroniseer sessies met een duidelijke sync-status.</p>
+    <br />
+    <h2>Atleetinstellingen</h2>
+    <p>Configureer FTP, gewicht en trainingsgedrag in een aparte instellingenpagina.</p>
+</section>

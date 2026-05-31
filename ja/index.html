@@ -1,0 +1,67 @@
+---
+layout: page
+lang: ja
+permalink: /ja/
+---
+
+<section class="flex flex-col sm:flex-row mt-16 mb-16 justify-center items-center gap-x-10 max-w-screen-md m-auto">
+    <img class="h-auto filter drop-shadow-xl w-1/5" style="border-radius: 22.5%;"
+        src="{{ site.app_icon | relative_url }}" alt="アプリアイコン" />
+    <div class="m-3 text-center sm:text-left">
+        <h1 class="text-4xl font-bold">{{ site.app_name }}</h1>
+        <p class="text-xl font-semibold mb-1">ERGワークアウトをもっとシンプルに</p>
+        <div class="flex space-x-2 max-w-full">
+            <a href="{{ site.app_download }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/apple-badge.png' | relative_url }}" alt="ダウンロード" />
+            </a>
+            {% if site.app_github %}
+            <a href="{{ site.app_github }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/github-badge.png' | relative_url }}" alt="github で開く" />
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto">
+    <h2 class="ml-6 text-2xl font-bold">スクリーンショット</h2>
+    <div class="flex gap-x-7 overflow-x-scroll">
+        {% assign screenshots = site.static_files | where_exp: "f", "f.path contains '/assets/screenshots/ja/'" %}
+        {% for img in screenshots %}
+        <img class="{% if forloop.first %}ml-7{% endif %} {% if forloop.last %}mr-7{% endif %} w-48 h-auto shadow rounded-2xl transform transition duration-300 hover:scale-105 my-7"
+            src="{{ img.path | relative_url }}" alt="{{ img.name }}">
+        {% endfor %}
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto px-6 markdown">
+    <h2 class="text-2xl font-bold mb-3">アプリ概要</h2>
+    <p>Trainer Workouts は、Bluetooth センサーとスマートトレーナーに対応したインドアサイクリング向け iOS アプリです。構造化トレーニング、ライブ指標の確認、履歴管理をシンプルに行えます。</p>
+    <br />
+    <h2>ライブトレーニングダッシュボード</h2>
+    <p>パワー、ケイデンス、心拍、速度、距離、経過時間などの主要指標をリアルタイム表示。</p>
+    <br />
+    <h2>Bluetooth デバイス管理</h2>
+    <p>心拍計、ケイデンスセンサー、ホームトレーナーのペアリングと再接続を簡単に実行。</p>
+    <br />
+    <h2>構造化ワークアウト</h2>
+    <p>内蔵およびカスタムの Zwift <code>.zwo</code> ワークアウトに対応。視覚的なタイムラインと目標ガイドを提供します。</p>
+    <br />
+    <h2>作成 / インポート / エクスポート</h2>
+    <p>アプリ内でワークアウトを作成し、ファイルアプリから <code>.zwo</code> を読み込み、必要に応じて書き出せます。</p>
+    <br />
+    <h2>セッション操作</h2>
+    <p>開始・一時停止・再開・終了に対応。ワークアウト終了時の自動処理も設定可能です。</p>
+    <br />
+    <h2>ガイダンス通知</h2>
+    <p>インターバル切り替え前に、音とバイブによるカウントダウン通知を任意で表示できます。</p>
+    <br />
+    <h2>履歴とパフォーマンス追跡</h2>
+    <p>セッション履歴を完全保存し、サマリー指標とワークアウト後の詳細ビューを確認できます。</p>
+    <br />
+    <h2>Strava 連携</h2>
+    <p>Strava アカウントを接続してセッションを同期。同期状態も分かりやすく表示します。</p>
+    <br />
+    <h2>アスリート設定</h2>
+    <p>FTP、体重、トレーニング関連の動作を専用設定画面で調整できます。</p>
+</section>

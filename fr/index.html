@@ -1,0 +1,73 @@
+---
+layout: page
+lang: fr
+permalink: /fr/
+---
+
+<section class="flex flex-col sm:flex-row mt-16 mb-16 justify-center items-center gap-x-10 max-w-screen-md m-auto">
+    <img class="h-auto filter drop-shadow-xl w-1/5" style="border-radius: 22.5%;"
+        src="{{ site.app_icon | relative_url }}" alt="icone de l'application" />
+    <div class="m-3 text-center sm:text-left">
+        <h1 class="text-4xl font-bold">{{ site.app_name }}</h1>
+        <p class="text-xl font-semibold mb-1">Les entrainements ERG simplifies</p>
+        <div class="flex space-x-2 max-w-full">
+            <a href="{{ site.app_download }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/apple-badge.png' | relative_url }}" alt="telecharger" />
+            </a>
+            {% if site.app_github %}
+            <a href="{{ site.app_github }}" target="_blank" rel="noopener noreferrer">
+                <img class="h-14" src="{{ '/assets/github-badge.png' | relative_url }}" alt="ouvrir sur github" />
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<section class="max-w-screen-lg m-auto">
+    <h2 class="ml-6 text-2xl font-bold">Captures d'ecran</h2>
+    <div class="flex gap-x-7 overflow-x-scroll">
+        {% assign screenshots = site.static_files | where_exp: "f", "f.path contains '/assets/screenshots/fr/'" %}
+        {% for img in screenshots %}
+        <img class="{% if forloop.first %}ml-7{% endif %} {% if forloop.last %}mr-7{% endif %} w-48 h-auto shadow rounded-2xl transform transition duration-300 hover:scale-105 my-7"
+            src="{{ img.path | relative_url }}" alt="{{ img.name }}">
+        {% endfor %}
+    </div>
+</section>
+
+{% if site.app_description %}
+<section class="max-w-screen-lg m-auto px-6 markdown">
+    <h2 class="text-2xl font-bold mb-3">Description</h2>
+    <p>Trainer Workouts est une application iOS concue pour le cyclisme indoor avec capteurs Bluetooth et home trainers
+    intelligents. Elle aide les athletes a s'entrainer de facon structuree, suivre les metriques en direct et conserver
+    un historique clair des seances.</p>
+    <br />
+    <h2>Tableau de bord en direct</h2>
+    <p>Affichage en temps reel des metriques principales: puissance, cadence, frequence cardiaque, vitesse, distance et
+    duree.</p>
+    <br />
+    <h2>Gestion Bluetooth</h2>
+    <p>Appairage simple et reconnexion rapide des cardiofrequencemetres, capteurs de cadence et home trainers.</p>
+    <br />
+    <h2>Entrainements structures</h2>
+    <p>Entrainements Zwift <code>.zwo</code> integres ou personnalises, avec timeline visuelle et objectifs.</p>
+    <br />
+    <h2>Creation / import / export</h2>
+    <p>Creez des entrainements dans l'app, importez des fichiers <code>.zwo</code> depuis Fichiers, et exportez-les si
+    besoin.</p>
+    <br />
+    <h2>Controle de session</h2>
+    <p>Demarrage, pause, reprise et arret des sessions, avec automatisation optionnelle en fin d'entrainement.</p>
+    <br />
+    <h2>Alertes de guidage</h2>
+    <p>Alertes optionnelles avant les changements d'intervalle, avec son et vibration.</p>
+    <br />
+    <h2>Historique et suivi de performance</h2>
+    <p>Historique complet des sessions avec resume des metriques et vue detaillee apres entrainement.</p>
+    <br />
+    <h2>Integration Strava</h2>
+    <p>Connectez votre compte Strava et synchronisez vos sessions avec suivi clair de l'etat de synchronisation.</p>
+    <br />
+    <h2>Parametres athlete</h2>
+    <p>Configurez la FTP, le poids et les comportements d'entrainement depuis une section dediee.</p>
+</section>
+{% endif %}

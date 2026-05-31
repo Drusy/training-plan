@@ -21,34 +21,30 @@ links:
 
 
 app_description: |
-  Trainer Workouts is a focused iOS app built for indoor cycling sessions with Bluetooth sensors and smart trainers. It helps athletes train with structure, monitor key metrics live, and keep a clean workout history.
+  Transform your athletic ambitions into a structured, personalized training plan — powered by AI.
+
+  Whether you're preparing for your first marathon, a triathlon, or a cycling race, TrainingPlanCoach analyzes your profile and goals to generate a complete program that fits your level and schedule.
   <br /><br />
-  **Live training dashboard**  
-  Real-time display of core metrics like power, cadence, heart rate, speed, distance, and elapsed time.  
+  **YOUR RACE, YOUR PLAN**  
+  Add your upcoming competitions, set your target date, and get a training plan built week by week, session by session — automatically.  
   <br />
-  **Bluetooth device management**  
-  Easy pairing and reconnection for heart rate monitors, cadence sensors, and home trainers.  
+  **AI THAT WORKS FOR YOU**  
+  Choose the engine that fits your needs: on-device algorithm (offline, free), Apple Intelligence (free, powerful, private), or Claude / GPT-4o (cutting-edge cloud AI, ~$0.01/plan).  
   <br />
-  **Structured workouts**  
-  Built-in and custom Zwift `.zwo` workouts with visual timeline and target guidance.  
+  **MULTI-SPORT**  
+  Running · Cycling · Swimming · Triathlon  
   <br />
-  **Workout creation & import/export**  
-  Create workouts directly in the app, import `.zwo` files from Files, and export workouts when needed.  
+  **TRACK YOUR PROGRESS**  
+  Check off each session as you complete it. Stay motivated with daily notifications and a home screen widget showing your next workout at a glance.  
   <br />
-  **Session control**  
-  Start, pause, resume, and stop sessions with optional automation at workout end.  
+  **RACE COUNTDOWN**  
+  Never lose sight of your goal. A dedicated widget counts down the days to your next competition.  
   <br />
-  **Workout guidance cues**  
-  Optional countdown alerts before interval changes, with sound/vibration support.  
+  **CONNECT WITH STRAVA**  
+  Sync your activities and let the AI refine your plan based on your real performance data.  
   <br />
-  **History & performance tracking**  
-  Full session history with summary metrics and detailed post-workout view.  
-  <br />
-  **Strava integration**  
-  Connect your Strava account and sync sessions with clear sync status tracking.  
-  <br />
-  **Athlete settings**  
-  Configure FTP, weight, and training-related behavior from a dedicated settings area.
+  **FOR EVERY LEVEL**  
+  Whether you're a beginner training for your first 10K or an experienced triathlete targeting an Ironman, TrainingPlanCoach adapts to your profile.  
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###

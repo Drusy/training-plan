@@ -1,66 +1,60 @@
 ---
 layout: post
-title: Politique de confidentialite
+title: Politique de confidentialité
 permalink: /fr/privacy/
 lang: fr
 ---
 
 # {{ site.app_name }}
-# Politique de confidentialite
+# Politique de confidentialité
 
-## A propos
+## À propos
 
-{{ site.app_name }} est une application iOS concue pour accompagner les sessions de cyclisme indoor avec appareils Bluetooth (frequence cardiaque, cadence et home trainer), entrainements structures et historique des sessions.
+{{ site.app_name }} est une application iOS qui aide les athlètes à gérer leurs compétitions à venir et à générer des plans d'entraînement personnalisés grâce à l'IA. Elle prend en charge la course à pied, le cyclisme, la natation et le triathlon.
 
-## Avertissement
+## Données utilisées
 
-Cette application n'est pas une application officielle de Zwift, Strava, ni d'aucun fabricant de trainer/capteur.  
-C'est un outil d'entrainement independant et non un jeu.
+{{ site.app_name }} peut accéder aux données suivantes pour fournir ses fonctionnalités principales :
 
-## Donnees utilisees
+- Données de profil sportif (discipline, niveau, poids optionnel)
+- Données de compétitions (dates, distances, objectifs)
+- Données de plan d'entraînement et de séances (programme, suivi de complétion)
+- Connexion optionnelle à Strava (uniquement si activée par l'utilisateur)
+- Notifications locales optionnelles (uniquement si autorisées par l'utilisateur)
 
-{{ site.app_name }} peut acceder aux donnees suivantes pour fournir ses fonctionnalites principales:
+## Stockage des données
 
-Donnees Bluetooth des appareils appaires (frequence cardiaque, cadence, puissance, vitesse)
-Donnees d'entrainement et de session (duree, metriques, historique)
-Parametres de profil optionnels (poids, FTP)
-Connexion optionnelle a Strava (uniquement si activee par l'utilisateur)
-Notifications locales optionnelles (uniquement si autorisees par l'utilisateur)
+Toutes les données de compétitions, plans et profil sont stockées localement sur votre appareil.  
+Nous n'exploitons pas de serveurs et ne collectons pas vos données personnelles.
 
-## Stockage des donnees
+Lorsque vous choisissez Claude (Anthropic) ou GPT-4o (OpenAI) pour générer un plan, votre profil et vos objectifs sont envoyés à l'API du fournisseur concerné. Cela est couvert par leurs politiques de confidentialité respectives :
 
-Les fichiers d'entrainement et de session sont stockes localement sur votre appareil.
-Les entrainements importes/generes sont stockes localement.
-Si la synchro Strava est activee, les fichiers de session peuvent etre envoyes vers Strava via votre compte authentifie.
-Nous ne vendons pas de donnees personnelles.
+- [Politique de confidentialité Anthropic](https://www.anthropic.com/privacy)
+- [Politique de confidentialité OpenAI](https://openai.com/privacy)
+
+Nous ne vendons pas de données personnelles.
 
 ## Autorisations
 
-Selon les fonctionnalites activees, l'application peut demander:
+Selon les fonctionnalités activées, l'application peut demander :
 
-Autorisation Bluetooth (decouverte des appareils et metriques en direct)
-Autorisation de notifications (alertes de changement de bloc d'entrainement)
-Acces aux fichiers (import/export des entrainements `.zwo`)
-
-## Achats integres et abonnement
-
-Deux sessions completes d'entrainement sont disponibles gratuitement.
-
-Ensuite, il est possible d'obtenir la version Premium pour des sessions illimitees via:
-
-- un abonnement mensuel
-- un abonnement annuel
-
-Il est aussi possible d'acheter completement l'application en mode Lifetime pour des sessions illimitees a vie (paiement unique).
+- Autorisation de notifications (rappels quotidiens d'entraînement et alertes de séances)
+- Accès Internet (pour la génération de plans IA et la synchronisation Strava optionnelle)
 
 ## Services tiers
 
-**API Strava** (optionnelle, uniquement si l'utilisateur se connecte):  
+**API Strava** (optionnelle, uniquement si l'utilisateur se connecte) :  
 [https://developers.strava.com](https://developers.strava.com)
 
-**Firebase Crashlytics** (stabilite de l'application et diagnostic des crashs)
+**API Claude d'Anthropic** (optionnelle, uniquement si sélectionnée par l'utilisateur) :  
+[https://www.anthropic.com](https://www.anthropic.com)
+
+**API OpenAI** (optionnelle, uniquement si sélectionnée par l'utilisateur) :  
+[https://openai.com](https://openai.com)
+
+**Firebase Crashlytics** (stabilité de l'application et diagnostic des crashs)
 
 ## Ressources
 
-Cette application utilise des ressources UI systeme Apple (SF Symbols) et des fichiers `.zwo` fournis par l'utilisateur.  
-Les assets de marques tierces (ex: bouton Strava) sont utilises selon leurs regles de marque.
+Cette application utilise des ressources UI système Apple (SF Symbols).  
+Les assets de marques tierces (ex. : bouton Strava) sont utilisés selon leurs règles de marque.

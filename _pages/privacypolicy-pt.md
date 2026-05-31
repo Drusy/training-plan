@@ -10,57 +10,51 @@ lang: pt
 
 ## Sobre
 
-{{ site.app_name }} é um app iOS para ciclismo indoor com dispositivos Bluetooth (frequência cardíaca, cadência e smart trainer), treinos estruturados e histórico.
-
-## Aviso
-
-Este app não é um aplicativo oficial da Zwift, Strava ou de fabricantes de trainer/sensor.  
-É uma ferramenta de treino independente, e não um jogo.
+{{ site.app_name }} é um app iOS que ajuda atletas a gerenciar suas próximas competições e a gerar planos de treino personalizados com IA. Suporta corrida, ciclismo, natação e triathlon.
 
 ## Dados que usamos
 
 {{ site.app_name }} pode acessar os seguintes dados para fornecer recursos principais:
 
-Dados Bluetooth de dispositivos pareados (frequência cardíaca, cadência, potência, velocidade)
-Dados de treino e sessão (duração, métricas, histórico)
-Configurações opcionais de perfil (peso, FTP)
-Conexão opcional com conta Strava (somente se o usuário ativar)
-Notificações locais opcionais (somente se autorizado)
+- Dados de perfil do atleta (esporte, nível de experiência, peso opcional)
+- Dados de competições (datas, distâncias, objetivos)
+- Dados de plano de treino e sessões (programação, status de conclusão)
+- Conexão opcional com conta Strava (somente se o usuário ativar)
+- Notificações locais opcionais (somente se autorizado pelo usuário)
 
 ## Como os dados são armazenados
 
-Arquivos de treino e sessão são armazenados localmente no seu dispositivo.
-Treinos importados ou gerados são armazenados localmente.
-Se a sincronização com Strava estiver ativa, arquivos de sessão podem ser enviados ao Strava pela sua conta autenticada.
+Todos os dados de competições, planos e perfil são armazenados localmente no seu dispositivo.  
+Não operamos servidores e não coletamos seus dados pessoais.
+
+Quando você escolhe Claude (Anthropic) ou GPT-4o (OpenAI) para gerar um plano, seu perfil e objetivos são enviados à API do respectivo provedor. Isso é regido pelas políticas de privacidade de cada um:
+
+- [Política de privacidade da Anthropic](https://www.anthropic.com/privacy)
+- [Política de privacidade da OpenAI](https://openai.com/privacy)
+
 Não vendemos dados pessoais.
 
 ## Permissões
 
 Dependendo dos recursos ativados, o app pode solicitar:
 
-Permissão de Bluetooth (descoberta de dispositivos e métricas ao vivo)
-Permissão de notificações (alertas de mudança de bloco)
-Acesso a arquivos (import/export de treinos `.zwo`)
-
-## Compras no app e assinaturas
-
-Duas sessões completas de treino estão disponíveis gratuitamente.
-
-Depois disso, é possível desbloquear a versão Premium com sessões ilimitadas por meio de:
-
-- assinatura mensal
-- assinatura anual
-
-Também é possível comprar o app por completo no modo Lifetime para sessões ilimitadas para sempre (pagamento único).
+- Permissão de notificações (lembretes diários de treino e alertas de sessões)
+- Acesso à internet (para geração de planos com IA e sincronização opcional com Strava)
 
 ## Serviços de terceiros
 
 **API do Strava** (opcional, somente se o usuário conectar):  
 [https://developers.strava.com](https://developers.strava.com)
 
+**API Claude da Anthropic** (opcional, somente se o usuário selecionar):  
+[https://www.anthropic.com](https://www.anthropic.com)
+
+**API da OpenAI** (opcional, somente se o usuário selecionar):  
+[https://openai.com](https://openai.com)
+
 **Firebase Crashlytics** (estabilidade do app e diagnóstico de falhas)
 
 ## Recursos
 
-Este app usa recursos de interface do sistema Apple (SF Symbols) e arquivos `.zwo` fornecidos pelo usuário.  
+Este app usa recursos de interface do sistema Apple (SF Symbols).  
 Assets de marcas de terceiros (ex.: botão do Strava) são usados conforme diretrizes de marca.

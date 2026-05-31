@@ -11,57 +11,51 @@ lang: en
 
 ## About
 
-{{ site.app_name }} is an iOS app designed to support indoor cycling sessions with Bluetooth devices (heart rate, cadence, and smart trainer), structured workouts, and training history.
-
-## Disclaimer
-
-This app is not an official application of Zwift, Strava, or any trainer/sensor manufacturer.  
-It is an independent training tool and not a game.
+{{ site.app_name }} is an iOS app that helps athletes manage their upcoming competitions and generate personalized training plans powered by AI. It supports running, cycling, swimming, and triathlon.
 
 ## Data We Use
 
 {{ site.app_name }} may access the following data to provide core features:
 
-Bluetooth data from paired devices (heart rate, cadence, power, speed)
-Workout and session data (duration, metrics, history)
-Optional profile settings (weight, FTP)
-Optional Strava account connection (only if user enables it)
-Optional local notifications (only if user grants permission)
+- Athlete profile data (sport, experience level, optional weight)
+- Race and competition data (dates, distances, goals)
+- Training plan and session data (schedule, completion status)
+- Optional Strava account connection (only if the user enables it)
+- Optional local notifications (only if the user grants permission)
 
 ## How Data Is Stored
 
-Workout and session files are stored locally on your device.
-Imported/generated workouts are stored locally.
-If Strava sync is enabled, session files may be uploaded to Strava through your authenticated account.
+All race, plan, and profile data is stored locally on your device.  
+We do not operate servers and do not collect or store your personal data.
+
+When you choose Claude (Anthropic) or GPT-4o (OpenAI) to generate a plan, your profile and goal data is sent to the respective provider's API to generate your plan. This is covered by their respective privacy policies:
+
+- [Anthropic Privacy Policy](https://www.anthropic.com/privacy)
+- [OpenAI Privacy Policy](https://openai.com/privacy)
+
 We do not sell personal data.
 
 ## Permissions
 
 Depending on enabled features, the app may request:
 
-Bluetooth permission (device discovery and live metrics)
-Notification permission (workout block change alerts)
-Files access (import/export of `.zwo` workouts)
-
-## In app purchase and subscription
-
-Two full training sessions are available for free.
-
-After that, users can unlock a Premium version for unlimited sessions through:
-
-- a monthly subscription
-- a yearly subscription
-
-Users can also purchase a Lifetime option to get unlimited sessions forever with a one-time payment.
+- Notification permission (daily training reminders and upcoming session alerts)
+- Internet access (for AI plan generation and optional Strava sync)
 
 ## Third-Party Services
 
 **Strava API** (optional, only when connected by user):  
 [https://developers.strava.com](https://developers.strava.com)
 
+**Anthropic Claude API** (optional, only when selected by user):  
+[https://www.anthropic.com](https://www.anthropic.com)
+
+**OpenAI API** (optional, only when selected by user):  
+[https://openai.com](https://openai.com)
+
 **Firebase Crashlytics** (app stability and crash diagnostics)
 
 ## Resources
 
-This app uses Apple system UI assets (SF Symbols) and user-provided workout files (`.zwo`).  
-Third-party brand assets (e.g., Strava button) are used according to their brand guidelines.  
+This app uses Apple system UI assets (SF Symbols).  
+Third-party brand assets (e.g., Strava button) are used according to their brand guidelines.
